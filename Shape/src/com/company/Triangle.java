@@ -1,6 +1,28 @@
 package com.company;
 
+
 public class Triangle extends Shapes{
+    double ab, bc, ca; //sides
+    Point2D a, b, c;
+
+    public Triangle(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    public Triangle(Point2D ab, Point2D bc, Point2D ca) {
+        this.ab = ab;
+        this.bc = bc;
+        this.ca = ca;
+    }
+
+    
+
+
+
+
+
     @Override
     double getArea() {
         return 0;
