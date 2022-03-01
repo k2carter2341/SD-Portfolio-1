@@ -4,8 +4,10 @@ import  java.awt.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
+    public void main(String[] args) {
+        Circle circle1 = new Circle();
+        circle1.getArea();
+        System.out.println("The area is " + circle1.getArea());
     }
 }
 
