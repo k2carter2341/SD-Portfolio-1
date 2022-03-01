@@ -5,18 +5,19 @@ import java.awt.geom.Point2D;
 
 public class Circle extends Shapes{
     private final double radius;
-    //private final Point2D.Double center;
+    private final Point2D.Double center;
+    
 
 
     public  Circle () {
         this.radius =5;
-        //this.center = new Point2D.Double(1.0, 1.0);
+        this.center = new Point2D.Double(1.0, 1.0);
     }
 
-    /*public Circle(double radius, Point2D.Double center ) {
-        this.radius = radius;
-        //this.center = center;
-    }*/
+    public Circle(double r, Point2D.Double c ) {
+        this.radius = r;
+        this.center = c;
+    }
 
 
 
