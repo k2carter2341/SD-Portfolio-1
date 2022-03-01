@@ -17,6 +17,7 @@ public class Main {
         Circle circle2 = new Circle(3.0, p);
         System.out.println("The area of circle 2 is " + circle2.getArea() );
         System.out.println("The perimeter of circle 2 is " + circle2.getPerimeter());
+        //System.out.println("The distance between circle 1 and cirlce 2 is " + getEuclidean() );
         
 
     }
@@ -34,6 +35,6 @@ abstract class Shapes {
     abstract double getPerimeter(){
         return perimeter;
     }
-    /*abstract double getEuclidean();
-    abstract boolean inShape();*/
+    //abstract double getEuclidean();
+    /*abstract boolean inShape();*/
 }

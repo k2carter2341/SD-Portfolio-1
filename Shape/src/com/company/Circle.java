@@ -19,6 +19,11 @@ public class Circle extends Shapes{
         this.center = c;
     }
 
+    //public double distance(Point2D pt){
+
+    //}
+
+
 
 
 
@@ -34,13 +39,13 @@ public class Circle extends Shapes{
         return 2* Math.PI * radius;
     }
 
-    /*@Override
+    @Override
     double getEuclidean() {
         // get formula for distance between two points
-        return 0; //public double distance(Point2D point);
+        return distance(center, c);
     }
 
-    @Override
+   /* @Override
     boolean inShape() {
         return false;
     }*/
