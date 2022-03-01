@@ -1,5 +1,6 @@
 package com.company;
-import java.awt.Point;
+import  java.awt.*;
+
 
 public class Main {
 

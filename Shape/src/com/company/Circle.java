@@ -1,23 +1,24 @@
 package com.company;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 
 public class Circle extends Shapes{
     private final double radius;
-    private Point point;
+    private final Point2D point;
 
-    public Circle(double radius, Point point) {
+    public  Circle () {
+        this.radius =1;
+        this.point = new Point2D.Double(0.1, 0.1);
+    }
+
+    public Circle(double radius, Point2D point) {
         this.radius = radius;
         this.point = point;
     }
 
-    public  Circle () {
-        this(1);
-    }
 
-    /*public Circle(double radius) {
-        this.radius = radius;
-    }*/
+
 
     @Override
     double getArea() {
@@ -33,7 +34,8 @@ public class Circle extends Shapes{
 
     @Override
     double getEuclidean() {
-        return 0;
+        // get formula for distance between two points
+        return 0; //public double distance(Point2D point);
     }
 
     @Override
