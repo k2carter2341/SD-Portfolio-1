@@ -1,27 +1,4 @@
 package com.company;
-
-<<<<<<< HEAD
-public class Circle extends Shapes{
-    @Override
-    double getArea() {
-        return 0;
-    }
-
-    @Override
-    double getPerimeter() {
-        return 0;
-    }
-
-    @Override
-    double getEuclidean() {
-        return 0;
-    }
-
-    @Override
-    boolean inShape() {
-        return false;
-    }
-=======
 //import java.awt.*;
 import java.awt.geom.Point2D;
 
@@ -61,5 +38,5 @@ public class Circle extends Shapes{
     boolean inShape() {
         return false;
     }*/
->>>>>>> Kristina-
+
 }
