@@ -27,14 +27,9 @@ public class Main {
         System.out.println("The perimeter of the second rectangle is " + rectangle2.getPerimeter());
         System.out.println("The distance between rectangle 1 and 2 is " + rectangle1.getEuclidean(rectangle2));*/
 
-
-        Triangle triangle1 = new Triangle(new Point2D.Double(0.0, 0.0), new Point2D.Double(9.0, 0.0), new Point2D.Double(4.0, 5.0));
-        System.out.println("The center of the triangle is " + triangle1.getCenter());
-        //Triangle triangle3 = new Triangle(p1, p2, p3)
-        //Triangle triangle2 = new Triangle(0.0, 0.0, 9.0, 0.0, 4.0, 5.0);
-
-
-
+        Triangle triangle1 = new Triangle(5.0, 1.0, 4.0);
+        System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
+        System.out.println("The area of the traingle is " + triangle1.getArea()); //with heron's forumla the issue of an imaginary number appears. I've looked this up and StackOverflow had something about determining if the points of the triangle are colinear. 
     }
 }
 
@@ -45,14 +40,14 @@ abstract class Shapes {
         return getPerimeter();
     }*/
     abstract double getArea();
-        //return area;
+        //return area;*/
     
     abstract double getPerimeter();
         //return perimeter;
 
     abstract Point2D.Double getCenter();
         //return center;
-    /*abstract boolean inShape();*/
+    //abstract boolean inShape();
 
     public double getEuclidean(Shapes shape){
         return this.getCenter().distance(shape.getCenter());
