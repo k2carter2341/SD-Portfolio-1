@@ -17,14 +17,21 @@ public class Main {
         System.out.println("The area of circle 2 is " + circle2.getArea() );
         System.out.println("The perimeter of circle 2 is " + circle2.getPerimeter());
         System.out.println("The distance between circle 1 and cirlce 2 is " + circle1.getEuclidean(circle2));*/
-        Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
+
+
+        /*Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
         Rectangle rectangle2 = new Rectangle (2.0, 4.0, new Point2D.Double(0, 5));
         System.out.println("The are is " + rectangle1.getArea());
         System.out.println("The perimenter is " + rectangle1.getPerimeter());
         System.out.println("The area of the second rectangle is " + rectangle2.getArea());
         System.out.println("The perimeter of the second rectangle is " + rectangle2.getPerimeter());
-        System.out.println("The distance between rectangle 1 and 2 is " + rectangle1.getEuclidean(rectangle2));
+        System.out.println("The distance between rectangle 1 and 2 is " + rectangle1.getEuclidean(rectangle2));*/
 
+
+        Triangle triangle1 = new Triangle(new Point2D.Double(0.0, 0.0), new Point2D.Double(9.0, 0.0), new Point2D.Double(4.0, 5.0));
+        System.out.println("The center of the triangle is " + triangle1.getCenter());
+        //Triangle triangle3 = new Triangle(p1, p2, p3)
+        //Triangle triangle2 = new Triangle(0.0, 0.0, 9.0, 0.0, 4.0, 5.0);
 
 
 
@@ -51,4 +58,3 @@ abstract class Shapes {
         return this.getCenter().distance(shape.getCenter());
     }
 }
-
