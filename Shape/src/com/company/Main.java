@@ -1,14 +1,13 @@
 package com.company;
-import  java.awt.*;
+//import  java.awt.*;
 import java.awt.geom.Point2D;
-
-import javax.sound.sampled.SourceDataLine;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        Circle circle1 = new Circle(3.0, new Point2D.Double());
+
+        /*Circle circle1 = new Circle(3.0, new Point2D.Double());
         circle1.getArea();
         System.out.println("The area is " + circle1.getArea());
         circle1.getPerimeter();
@@ -17,7 +16,11 @@ public class Main {
         Circle circle2 = new Circle(3.0, p);
         System.out.println("The area of circle 2 is " + circle2.getArea() );
         System.out.println("The perimeter of circle 2 is " + circle2.getPerimeter());
-        System.out.println("The distance between circle 1 and cirlce 2 is " + circle1.getEuclidean(circle2));
+        System.out.println("The distance between circle 1 and cirlce 2 is " + circle1.getEuclidean(circle2));*/
+        Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
+        System.out.println("The are is " + rectangle1.getArea());
+        System.out.println("The perimenter is " + rectangle1.getPerimeter());
+
 
 
     }
@@ -43,3 +46,4 @@ abstract class Shapes {
         return this.getCenter().distance(shape.getCenter());
     }
 }
+

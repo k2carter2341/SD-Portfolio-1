@@ -1,5 +1,4 @@
 package com.company;
-
 //import java.awt.*;
 import java.awt.geom.Point2D;
 
@@ -39,4 +38,5 @@ public class Circle extends Shapes{
     boolean inShape() {
         return false;
     }*/
+
 }
