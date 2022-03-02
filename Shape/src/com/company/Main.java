@@ -18,8 +18,13 @@ public class Main {
         System.out.println("The perimeter of circle 2 is " + circle2.getPerimeter());
         System.out.println("The distance between circle 1 and cirlce 2 is " + circle1.getEuclidean(circle2));*/
         Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
+        Rectangle rectangle2 = new Rectangle (2.0, 4.0, new Point2D.Double(0, 5));
         System.out.println("The are is " + rectangle1.getArea());
         System.out.println("The perimenter is " + rectangle1.getPerimeter());
+        System.out.println("The area of the second rectangle is " + rectangle2.getArea());
+        System.out.println("The perimeter of the second rectangle is " + rectangle2.getPerimeter());
+        System.out.println("The distance between rectangle 1 and 2 is " + rectangle1.getEuclidean(rectangle2));
+
 
 
 
