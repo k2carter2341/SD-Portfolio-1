@@ -6,8 +6,6 @@ import java.awt.geom.Point2D;
 public class Circle extends Shapes{
     private final double radius;
     private final Point2D.Double center;
-    
-
 
     public  Circle () {
         this.radius =5;
@@ -19,13 +17,11 @@ public class Circle extends Shapes{
         this.center = c;
     }
 
-    //public double distance(Point2D pt){
-
-    //}
-
-
-
-
+    @Override
+    Point2D.Double getCenter() {
+       return this.center;
+       
+   }
 
     @Override
     double getArea() {
@@ -37,12 +33,6 @@ public class Circle extends Shapes{
     double getPerimeter() {
         //Circumference= 2*pi*r
         return 2* Math.PI * radius;
-    }
-
-    @Override
-    double getEuclidean() {
-        // get formula for distance between two points
-        return distance(center, c);
     }
 
    /* @Override
