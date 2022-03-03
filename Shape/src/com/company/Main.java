@@ -18,6 +18,18 @@ public class Main {
         System.out.println("The perimeter of circle 2 is " + circle2.getPerimeter());
         System.out.println("The distance between circle 1 and cirlce 2 is " + circle1.getEuclidean(circle2));*/
 
+        //public static void main(String arg[])
+    
+
+        Circle circlepoint = new Circle();
+        Point2D.Double outofshape = new Point2D.Double(10.0, 0.0);
+        
+        if (circlepoint.inShape(outofshape))
+            System.out.println("Inside");
+        else
+            System.out.println("Outside");
+    
+
 
         /*Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
         Rectangle rectangle2 = new Rectangle (2.0, 4.0, new Point2D.Double(0, 5));
@@ -31,10 +43,11 @@ public class Main {
         System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
         System.out.println("The area of the traingle is " + triangle1.getArea()); //with heron's forumla the issue of an imaginary number appears. I've looked this up and StackOverflow had something about determining if the points of the triangle are colinear. */
 
-        Triangle triangle1 = new Triangle( new Point2D.Double(1.0, 2.0), new Point2D.Double(3.0, -4.0), new Point2D.Double(-4.0, 5.0));
-        System.out.println("The center of the triangle is " + triangle1.getCenter());
-        System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
-        System.out.println("The area of the triangle is " + triangle1.getArea());
+        // Triangle triangle1 = new Triangle(new Point2D.Double(1.0, 2.0), new Point2D.Double(3.0, -4.0), new Point2D.Double(-4.0, 5.0));
+
+        // System.out.println("The center of the triangle is " + triangle1.getCenter());
+        // System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
+        // System.out.println("The area of the triangle is " + triangle1.getArea());
     }
 }
 
@@ -53,6 +66,8 @@ abstract class Shapes {
     abstract Point2D.Double getCenter();
         //return center;
     //abstract boolean inShape();
+
+    abstract boolean inShape(Point2D.Double point);
 
     public double getEuclidean(Shapes shape){
         return this.getCenter().distance(shape.getCenter());
