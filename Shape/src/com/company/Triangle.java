@@ -40,15 +40,18 @@ public class Triangle extends Shapes{
         double sideP1P3 = (double)Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
         return sideP1P2 + sideP2P3 + sideP1P3;
     }
-    //@Override
-    /*double getArea() {
+    @Override
+    double getArea() {
         // Using Heron's formula = SquareRoot(s * (s - a) * (s - b) * (s - c))
         // s = (a + b + c)/2
-        double s = (side1 + side2 + side3) / 2;
-        System.out.println(side1);
-        System.out.println(side2);
-        System.out.println(side3);
-        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        double sideP1P2 = (double)Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
+        double sideP2P3 = (double)Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
+        double sideP1P3 = (double)Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
+        double s = (sideP1P2 + sideP2P3 + sideP1P3) / 2;
+        System.out.println(sideP1P2);
+        System.out.println(sideP2P3);
+        System.out.println(sideP1P3);
+        return Math.sqrt(s * (s - sideP1P2) * (s - sideP2P3) * (s - sideP1P3));
         }
 
     

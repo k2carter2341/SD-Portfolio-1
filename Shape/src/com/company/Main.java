@@ -34,6 +34,7 @@ public class Main {
         Triangle triangle1 = new Triangle( new Point2D.Double(1.0, 2.0), new Point2D.Double(3.0, -4.0), new Point2D.Double(-4.0, 5.0));
         System.out.println("The center of the triangle is " + triangle1.getCenter());
         System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
+        System.out.println("The area of the triangle is " + triangle1.getArea());
     }
 }
 
@@ -43,7 +44,7 @@ abstract class Shapes {
         return getArea();
         return getPerimeter();
     }*/
-    /*abstract double getArea();
+    abstract double getArea();
         //return area;*/
     
     abstract double getPerimeter();
