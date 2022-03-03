@@ -31,7 +31,15 @@ public class Triangle extends Shapes{
     }
     // Prints out "The center of the triangle is Point2D[x,y]" the y is correct but not the x.
     //The very simple thignt to remember is pemdas and parentheses.
-
+    @Override
+    double getPerimeter() {
+        //Use distance formula to find lengths: sqrt((x2 − x1)^2 + (y2 − y1)^2) 
+        // with each length, find perimeter: perimeter = sideP1P2 + sideP2P3+ sideP1P3
+        double sideP1P2 = (double)Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
+        double sideP2P3 = (double)Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
+        double sideP1P3 = (double)Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
+        return sideP1P2 + sideP2P3 + sideP1P3;
+    }
     //@Override
     /*double getArea() {
         // Using Heron's formula = SquareRoot(s * (s - a) * (s - b) * (s - c))
@@ -43,11 +51,7 @@ public class Triangle extends Shapes{
         return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
         }
 
-    @Override
-    double getPerimeter() {
-        //perimeter == side1 + side2 + side3
-        return side1 + side2 + side3;
-    }
+    
 
     
 

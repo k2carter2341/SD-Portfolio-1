@@ -31,8 +31,9 @@ public class Main {
         System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
         System.out.println("The area of the traingle is " + triangle1.getArea()); //with heron's forumla the issue of an imaginary number appears. I've looked this up and StackOverflow had something about determining if the points of the triangle are colinear. */
 
-        Triangle triangle1 = new Triangle( new Point2D.Double(47.0, 40.0), new Point2D.Double(15.0, 15.0), new Point2D.Double(65.0, 20.0));
+        Triangle triangle1 = new Triangle( new Point2D.Double(1.0, 2.0), new Point2D.Double(3.0, -4.0), new Point2D.Double(-4.0, 5.0));
         System.out.println("The center of the triangle is " + triangle1.getCenter());
+        System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
     }
 }
 
@@ -45,7 +46,7 @@ abstract class Shapes {
     /*abstract double getArea();
         //return area;*/
     
-   // abstract double getPerimeter();
+    abstract double getPerimeter();
         //return perimeter;*/
 
     abstract Point2D.Double getCenter();
