@@ -67,6 +67,7 @@ public class Triangle extends Shapes{
     private double area(Point2D.Double pA, Point2D.Double pB, Point2D.Double pC) {
         return Math.abs((pA.getX()*(pB.getY()-pC.getY()))+(pB.getX()*(pC.getY()-pA.getY()))+(pC.getX()*(pA.getY()-pB.getY()))/2.0);
     }
+
     @Override
     boolean inShape(Point2D.Double point) {
         double area0 = area(this.p1, this.p2, this.p3);
