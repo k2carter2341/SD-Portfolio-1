@@ -21,13 +21,13 @@ public class Main {
         //public static void main(String arg[])
     
 
-        Circle circlepoint = new Circle();
-        Point2D.Double outofshape = new Point2D.Double(10.0, 0.0);
+        // Circle circlepoint = new Circle();
+        // Point2D.Double outofshape = new Point2D.Double(10.0, 0.0);
         
-        if (circlepoint.inShape(outofshape))
-            System.out.println("Inside");
-        else
-            System.out.println("Outside");
+        // if (circlepoint.inShape(outofshape))
+        //     System.out.println("Inside");
+        // else
+        //     System.out.println("Outside");
 
         /*Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
         Rectangle rectangle2 = new Rectangle (2.0, 4.0, new Point2D.Double(0, 5));
@@ -37,22 +37,31 @@ public class Main {
         System.out.println("The perimeter of the second rectangle is " + rectangle2.getPerimeter());
         System.out.println("The distance between rectangle 1 and 2 is " + rectangle1.getEuclidean(rectangle2));*/
         
-        Rectangle rectpoint = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
-        Point2D.Double randompoint = new Point2D.Double(10.0, 10.0);
-        if (rectpoint.inShape(randompoint))
-            System.out.println("Inside");
-        else
-            System.out.println("Outside");
+        // Rectangle rectpoint = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
+        // Point2D.Double randompoint = new Point2D.Double(10.0, 10.0);
+        // if (rectpoint.inShape(randompoint))
+        //     System.out.println("Inside");
+        // else
+        //     System.out.println("Outside");
 
         /*Triangle triangle1 = new Triangle(5.0, 3.0, 4.0);
         System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
         System.out.println("The area of the traingle is " + triangle1.getArea()); //with heron's forumla the issue of an imaginary number appears. I've looked this up and StackOverflow had something about determining if the points of the triangle are colinear. */
 
-        // Triangle triangle1 = new Triangle(new Point2D.Double(1.0, 2.0), new Point2D.Double(3.0, -4.0), new Point2D.Double(-4.0, 5.0));
-
+        Triangle triangle1 = new Triangle(new Point2D.Double(0.0, 0.0), new Point2D.Double(20.0, 0.0), new Point2D.Double(10.0, 30.0));
+        triangle1.getArea();
+        //triangle1.getArea(new Point2D.Double(3.0, 3.0), new Point2D.Double(3.0, -4.0), new Point2D.Double(-4.0, 5.0));
         // System.out.println("The center of the triangle is " + triangle1.getCenter());
         // System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
         // System.out.println("The area of the triangle is " + triangle1.getArea());
+
+         /* Let us check whether the point P(10, 15)
+           lies inside the triangle formed by
+           A(0, 0), B(20, 0) and C(10, 30) */
+        if (triangle1.inShape(new Point2D.Double(35.0, 35.0)))
+            System.out.println("Inside");
+        else
+            System.out.println("Outside");
     }
 }
 
