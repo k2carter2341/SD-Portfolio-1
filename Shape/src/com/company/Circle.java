@@ -17,19 +17,19 @@ public class Circle extends Shapes{
     }
 
     @Override
-    Point2D.Double getCenter() {
+   public Point2D.Double getCenter() {
        return this.center;
        
    }
 
     @Override
-    double getArea() {
+    public double getArea() {
         //Area= 2*pi*r^2
         return   Math.PI * radius * radius; //not this.radius?
     }
 
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         //Circumference= 2*pi*r
         return 2* Math.PI * radius;
     }
@@ -37,7 +37,7 @@ public class Circle extends Shapes{
     //boolean isInside(int circle_x, int circle_y, int rad, int x, int y)
     // Compare radius of circle with distance of its center from given point
     //code taken from https://www.geeksforgeeks.org/find-if-a-point-lies-inside-or-on-circle/
-    boolean inShape(Point2D.Double point) {
+    public boolean inShape(Point2D.Double point) {
         if((point.getX())-(this.center.getX()) * 
         (point.getX())-(this.center.getX()) +
         (point.getY())-(this.center.getY()) *

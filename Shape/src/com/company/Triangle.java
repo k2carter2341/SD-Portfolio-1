@@ -30,7 +30,7 @@ public class Triangle extends Shapes{
     //With this constructor there are only three doubles, but we need an x and y component for a point
 
     @Override
-    Point2D.Double getCenter() {
+    public Point2D.Double getCenter() {
         //final Point2D.Double centroid = new Point2D.Double((p1.getX() + p2.getX() + p3.getX()) / 3.0, (p1.getY() + p2.getY() + p3.getY()) / 3.0);
         double x = (this.p1.getX()+this.p2.getX()+this.p3.getX())/3;
         double y = (this.p1.getY()+this.p2.getY()+this.p3.getY())/3;
@@ -39,7 +39,7 @@ public class Triangle extends Shapes{
     // Prints out "The center of the triangle is Point2D[x,y]" the y is correct but not the x.
     //The very simple thignt to remember is pemdas and parentheses.
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         //Use distance formula to find lengths: sqrt((x2 − x1)^2 + (y2 − y1)^2) 
         // with each length, find perimeter: perimeter = sideP1P2 + sideP2P3+ sideP1P3
         double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
@@ -48,7 +48,7 @@ public class Triangle extends Shapes{
         return sideP1P2 + sideP2P3 + sideP1P3;
     }
     @Override
-    double getArea() {
+    public double getArea() {
         // Using Heron's formula = SquareRoot(s * (s - a) * (s - b) * (s - c))
         // s = (a + b + c)/2
         double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
@@ -69,7 +69,7 @@ public class Triangle extends Shapes{
     }
 
     @Override
-    boolean inShape(Point2D.Double point) {
+    public boolean inShape(Point2D.Double point) {
         double area0 = area(this.p1, this.p2, this.p3);
         double area1 = area(this.p1, this.p2, point);
         double area2 = area(point, this.p2, this.p3);

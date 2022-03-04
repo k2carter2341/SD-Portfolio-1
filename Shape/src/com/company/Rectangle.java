@@ -15,17 +15,17 @@
      }
 
      @Override
-     double getArea() {
+     public double getArea() {
          return length * width;
      }
 
      @Override
-     double getPerimeter() {
+     public double getPerimeter() {
          return (2 * length)+ (2 * width);
      }
 
      @Override
-     Point2D.Double getCenter() {
+     public Point2D.Double getCenter() {
          // formula is (x/2, y/2)
          double x = this.width/2 + this.bottomRight.getX();
          double y = this.length/2 + this.bottomRight.getY();
@@ -34,7 +34,7 @@
      }
 
      //code taken from https://www.geeksforgeeks.org/check-whether-a-given-point-lies-on-or-inside-the-rectangle-set-3/?ref=rp
-     boolean inShape(Point2D.Double point) {
+     public boolean inShape(Point2D.Double point) {
         if (point.getX()-point.getY()-this.width <= 0 &&
         point.getX()-point.getY()+this.width >= 0 &&
         point.getX()+point.getY()-2*this.length+this.width <= 0 &&
