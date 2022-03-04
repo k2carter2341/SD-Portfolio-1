@@ -1,7 +1,7 @@
 package com.company;
 //import  java.awt.*;
-import java.awt.geom.Point2D;
-
+import java.awt.geom.Point2D; //https://docs.oracle.com/javase/7/docs/api/java/awt/Point.html
+//https://codereview.stackexchange.com/questions/83769/implement-a-shape-abstract-class dont know where to put in code or if we should at all.
 
 public class Main {
 
