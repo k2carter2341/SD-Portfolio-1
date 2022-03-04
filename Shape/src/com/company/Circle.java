@@ -38,7 +38,7 @@ public class Circle extends Shapes{
 
     //boolean isInside(int circle_x, int circle_y, int rad, int x, int y)
     // Compare radius of circle with distance of its center from given point
-
+    //code taken from https://www.geeksforgeeks.org/find-if-a-point-lies-inside-or-on-circle/
     boolean inShape(Point2D.Double point) {
         if((point.getX())-(this.center.getX()) * 
         (point.getX())-(this.center.getX()) +
@@ -48,7 +48,6 @@ public class Circle extends Shapes{
             return true;
         else 
             return false;
-        
     }
 // if ((x - circle_x) * (x - circle_x) +
 // (y - circle_y) * (y - circle_y) <= rad * rad)
@@ -60,4 +59,3 @@ public class Circle extends Shapes{
 }
 
 
-// (double)Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2))

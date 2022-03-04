@@ -28,8 +28,6 @@ public class Main {
             System.out.println("Inside");
         else
             System.out.println("Outside");
-    
-
 
         /*Rectangle rectangle1 = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
         Rectangle rectangle2 = new Rectangle (2.0, 4.0, new Point2D.Double(0, 5));
@@ -38,6 +36,13 @@ public class Main {
         System.out.println("The area of the second rectangle is " + rectangle2.getArea());
         System.out.println("The perimeter of the second rectangle is " + rectangle2.getPerimeter());
         System.out.println("The distance between rectangle 1 and 2 is " + rectangle1.getEuclidean(rectangle2));*/
+        
+        Rectangle rectpoint = new Rectangle(2.0, 4.0, new Point2D.Double(0,0));
+        Point2D.Double randompoint = new Point2D.Double(10.0, 10.0);
+        if (rectpoint.inShape(randompoint))
+            System.out.println("Inside");
+        else
+            System.out.println("Outside");
 
         /*Triangle triangle1 = new Triangle(5.0, 3.0, 4.0);
         System.out.println("The perimeter of the triangle is " + triangle1.getPerimeter());
@@ -52,7 +57,8 @@ public class Main {
 }
 
 abstract class Shapes {
-    double area, perimeter;
+    // double area; 
+    // double perimeter;
     /*public double Shapes(){   So the code runs with this constructor but not sure if the abstract class should be here?
         return getArea();
         return getPerimeter();
