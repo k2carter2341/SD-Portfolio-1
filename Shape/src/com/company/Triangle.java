@@ -6,9 +6,9 @@ public class Triangle extends Shapes{
     private Point2D.Double p2;
     private Point2D.Double p3;
     
-    double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
-    double sideP2P3 = Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
-    double sideP1P3 = Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
+    // double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
+    // double sideP2P3 = Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
+    // double sideP1P3 = Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
     /*private final double side1;
     private final double side2;
     private final double side3;*/
@@ -42,18 +42,18 @@ public class Triangle extends Shapes{
     double getPerimeter() {
         //Use distance formula to find lengths: sqrt((x2 − x1)^2 + (y2 − y1)^2) 
         // with each length, find perimeter: perimeter = sideP1P2 + sideP2P3+ sideP1P3
-        // double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
-        // double sideP2P3 = Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
-        // double sideP1P3 = Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
+        double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
+        double sideP2P3 = Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
+        double sideP1P3 = Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
         return sideP1P2 + sideP2P3 + sideP1P3;
     }
     @Override
     double getArea() {
         // Using Heron's formula = SquareRoot(s * (s - a) * (s - b) * (s - c))
         // s = (a + b + c)/2
-        // double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
-        // double sideP2P3 = Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
-        // double sideP1P3 = Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
+        double sideP1P2 = Math.sqrt(Math.pow((this.p2.getX() - this.p1.getX()),2) + Math.pow((this.p2.getY() - this.p1.getY()),2));
+        double sideP2P3 = Math.sqrt(Math.pow((this.p3.getX() - this.p2.getX()),2) + Math.pow((this.p3.getY() - this.p2.getY()),2));
+        double sideP1P3 = Math.sqrt(Math.pow((this.p1.getX() - this.p3.getX()),2) + Math.pow((this.p1.getY() - this.p3.getY()),2));
         double s = (sideP1P2 + sideP2P3 + sideP1P3) / 2;
         // System.out.println(sideP1P2);
         // System.out.println(sideP2P3);
